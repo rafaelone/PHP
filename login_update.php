@@ -9,17 +9,10 @@
 
 ?>
 
-<!DOCTYPE html>
-
-<html lang = "pt">
-<head>
-	<meta charset = "utf-8">
-		<title> Aula PHP</title>
-		<link rel="stylesheet" type="text/css" href="_css/bootstrap.min.css">
-</head>
-<body>
+<?php 	include "includes/header.php" ?>
 <div class="container">
 	<div class="col-sm-6">
+	<h1 class="text-center">Update</h1>
 	<form action="login_update.php" method="post" class="form-group">
 		<div class="form-group">
 			<label for="username">Usuario</label>
@@ -40,10 +33,8 @@
 		</div>
 
 		<input type="submit" name="update" class="btn btn-primary" value="Atualizar">
-		<a href="login.php"><button class="btn btn-primary">Cadastro</button></a>
 	</form>
-
+	<?php include "includes/buttons.php" ?>
 
  	</div>
-</body>
-</html>
+<?php 	include "includes/footer.php" ?>

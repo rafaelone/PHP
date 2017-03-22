@@ -1,41 +1,19 @@
-<?php
+<?php include 'db.php'; ?>
+<?php include 'functions.php'; ?>
 
-	$connection = mysqli_connect('localhost', 'root', 'fiap', 'loginapp');
-	
-	if (!$connection){
-		die("vish deu ruim");
-	}
-
-
-	$query = "SELECT * FROM usuarios";
-	$resultado = mysqli_query($connection, $query);
-
-
-
+<?php 
+include "includes/header.php";
 ?>
-
-<!DOCTYPE html>
-
-<html lang = "pt">
-<head>
-	<meta charset = "utf-8">
-		<title> Aula PHP</title>
-		<link rel="stylesheet" type="text/css" href="_css/bootstrap.min.css">
-</head>
-<body>
 <div class="container">
 	<div class="col-sm-6">
+	<h1 class="text-center">Read</h1>
 		<?php 
-		while ($row = mysqli_fetch_assoc($resultado)){
 		
+			leDados();
+			
 		?>
-		<pre>
-		<?php
-		print_r($row);
-}
-		?>
-
-
+	
+<?php include "includes/buttons.php" ?>
  	</div>
-</body>
-</html>
+ 	
+<?php include "includes/footer.php"?>
