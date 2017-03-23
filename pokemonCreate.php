@@ -1,5 +1,5 @@
 <?php include "pokemonDb.php" ?>
-<?php include "includes/header.php" ?>
+<?php include "functionsPokemon.php" ?>
 
 <?php 
 	if(isset($_POST['cadastrar'])){
@@ -10,6 +10,7 @@
 
 <div class="container">
 	<div class="col-sm-6">
+	<?php include "includes/header.php" ?>
 		<h1 class="center">Create Pokemons</h1>
 			<form action="pokemonCreate.php" method="post">
 				<div class="form-group">
@@ -17,7 +18,7 @@
 						<input type="text" name="name" id="name" placeholder="Nome do pokemon" class="form-control">
 				</div>
 				<div class="form-group">
-					<label for="type">Type</label>
+					<label for="type">Tipo</label>
 						<input type="text" name="type" id="type" placeholder="Tipo do pokemon" class="form-control">
 				</div>
 				<div class="form-group">

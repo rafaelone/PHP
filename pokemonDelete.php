@@ -1,8 +1,13 @@
 <?php include "pokemonDb.php" ?>
-<?php include "includes/header.php" ?>
+<?php include "functionsPokemon.php" ?>
+
+if (isset($_POST['delete'])){
+		deletarPokemon();
+	}
 
 <div class="container">
 	<div class="col-sm-6">
+	<?php include "includes/header.php" ?>
 	<h1 class="text-center">Delete</h1>
 	
 
@@ -24,7 +29,7 @@
 				?>
 			</select>
 		</div>
-		<input type="submit" name="enviar" class="btn btn-primary" value="enviar">
+		<input type="submit" name="delete" class="btn btn-primary" value="enviar">
 	</form>
 	<?php include "includes/botoesPokemon.php" ?>
 	</div>
