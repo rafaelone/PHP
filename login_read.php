@@ -1,5 +1,5 @@
-<?php include 'db.php'; ?>
-<?php include 'functions.php'; ?>
+<?php include "pokemonDb.php" ?>
+<?php include "functionsPokemon.php" ?>
 
 <?php 
 include "includes/header.php";
@@ -9,7 +9,7 @@ include "includes/header.php";
 	<h1 class="text-center">Read</h1>
 		<?php 
 		
-			leDados();
+			lePokemon();
 			
 		?>
 	

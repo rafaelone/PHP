@@ -5,10 +5,9 @@ function cadastraPokemon(){
 	global $connection;
 
 	$name = $_POST['name'];
-	$typo = $_POST['type'];
+	$type = $_POST['type'];
 	$hp = $_POST['hp'];
-
-	$query = "INSERT INTO pokemon (name, type, hp) VALUES ('$name', 'type', 'hp')";
+	$query = "INSERT INTO pokemons (name, type, hp) VALUES ('$name', '$type', '$hp')";
 	$resultado = mysqli_query($connection, $query);
 	if (!$resultado){
 		die("Não deu certo a inclusão" . mysqli_error());
@@ -17,20 +16,24 @@ function cadastraPokemon(){
 	}
 
 }
-/*
+
+
 function lePokemon(){
 	global $connection;
-	$query = "SELECT * from pokemons where type = 'fogo'";
+	$query = "SELECT * from pokemons where type = 'fire'";
 	$resultado = mysqli_query($connection, $query);
 	while ($row = mysqli_fetch_assoc($resultado)){
 		echo "<pre>";
 		print_r($row);
 		echo "</pre>";
-}
+}}
+
+
+
 
 function mostrarPokemon (){
 	global $connection;
-	query = "SELECT * from pokemons";
+	$query = "SELECT * from pokemons";
 	$resultado = mysqli_query($connection, $query);
 
 	while ($row = mysqli_fetch_assoc($resultado)) {
@@ -42,15 +45,15 @@ function mostrarPokemon (){
 function atualizaPokemon(){
 	global $connection;
 
-$name = $_POST['name'];
+	$name = $_POST['name'];
 	$type = $_POST['type'];
 	$hp = $_POST['hp'];
 	$id = $_POST['id'];
 
-	$query = "update usuarios set ";
-	$query .= "name = '$name', ";
-	$query .= "type = '$type' ";
-	$query .= "hp = '$hp' ";
+	$query = "UPDATE pokemons set ";
+	$query .= "name = '$name',";
+	$query .= "type = '$type',";
+	$query .= "hp = '$hp'";
 	$query .= "where id = $id";
 		
  $resultado = mysqli_query($connection, $query);
@@ -62,8 +65,9 @@ $name = $_POST['name'];
 	}
 
 
-function deletarPokemon()
-global $connection;
+function deletarPokemon(){
+	global $connection;
+
 
 $name = $_POST['name'];
 	$type = $_POST['type'];
@@ -80,5 +84,5 @@ $query = "delete from pokemons ";
  	}else{
  		echo "Dados removidos com sucesso";
  		}
-*/
+}
 ?>

@@ -29,7 +29,7 @@
 						<input type="submit" name="cadastrar" value="cadastrar">
 				</div>
 			</form>
-<?php include "includes/botoesPokemon.php" ?>
+<?php include "includes/botoesPokemon.php" ?>	
 	</div>
 
 	<?php include "includes/footer.php" ?>

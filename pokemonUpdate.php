@@ -30,7 +30,7 @@ if (isset($_POST['update'])){
 					</select>
 				</div>
 				<div class="form-group">
-					<input type="submit" name="atualizar" value="Atualizar">
+					<input type="submit" name="update" value="Atualizar">
 				</div>
 			</form>
 			<?php include "includes/botoesPokemon.php" ?>
