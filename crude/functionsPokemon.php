@@ -7,6 +7,7 @@ function cadastraPokemon(){
 	$name = $_POST['name'];
 	$type = $_POST['type'];
 	$hp = $_POST['hp'];
+	$name = mysqli_real_escape_string($connection, $name);
 	$query = "INSERT INTO pokemons (name, type, hp) VALUES ('$name', '$type', '$hp')";
 	$resultado = mysqli_query($connection, $query);
 	if (!$resultado){
