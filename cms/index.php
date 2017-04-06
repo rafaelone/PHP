@@ -42,9 +42,9 @@
                 <p class="lead">
                     por <a href="index.php"><?php echo $post_autor; ?></a>
                 </p>
-                <p><span class="glyphicon glyphicon-time"></span><?php echo $post_data; ?></p>
+                <p><span class="glyphicon glyphicon-time"></span><?= ['post_data']; ?></p>
                 <hr>
-                <img class="img-responsive" src="images/<?php echo $post_imagem; ?>" alt="">
+                <img class="img-responsive" src="images/<?= ['post_imagem']; ?>" alt="">
                 <hr>
                 <p><?php echo $post_conteudo; ?></p>
                 <a class="btn btn-primary" href="#">Leia mais.. <span class="glyphicon glyphicon-chevron-right"></span></a>
